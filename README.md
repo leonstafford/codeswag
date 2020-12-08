@@ -50,7 +50,7 @@ That should be about all that's required. For [Lokl](https://lokl.dev), I should
 
 ## Usage
 
- - install RSA key
+ - install RSA private key, `chmod`'d to 400
  - `sh -c "$(curl -sSl https://raw.githubusercontent.com/leonstafford/codeswag/master/setupcamp.sh)"`
 
 
