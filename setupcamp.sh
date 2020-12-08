@@ -29,13 +29,29 @@ cd "$HOME" || exit 1
 # shallow clone all my WordPress plugin and commonly worked on repos, such as
 # Hugo sites
 
-WP2STATIC_REPOS="leonstafford/wp2static
-leonstafford/notfiles
-leonstafford/wp2static-addon-s3
-leonstafford/wp2static-addon-zip
+WP2STATIC_REPOS="leonstafford/notfiles
+leonstafford/wp2static
 leonstafford/wp2static-addon-advanced-crawling
-leonstafford/wp2static-addon-netlify
+leonstafford/wp2static-addon-advanced-detection
+leonstafford/wp2static-addon-advanced-html-processor
+leonstafford/wp2static-addon-algolia
+leonstafford/wp2static-addon-azure
+leonstafford/wp2static-addon-bitbucket
+leonstafford/wp2static-addon-boilerplate
+leonstafford/wp2static-addon-bunnycdn
 leonstafford/wp2static-addon-cloudflare-workers
+leonstafford/wp2static-addon-ftp
+leonstafford/wp2static-addon-github
+leonstafford/wp2static-addon-gitlab
+leonstafford/wp2static-addon-netlify
+leonstafford/wp2static-addon-s3
+leonstafford/wp2static-addon-sftp
+leonstafford/wp2static-addon-static-form-converter
+leonstafford/wp2static-addon-vercel
+leonstafford/wp2static-addon-woocommerce-snipcart
+leonstafford/wp2static-addon-zip
+leonstafford/static-html-output
+leonstafford/simplerstatic
 "
 
 # skip any already existing, allowing to update script and pull new ones safely
