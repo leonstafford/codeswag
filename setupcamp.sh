@@ -12,8 +12,8 @@ tmux
 
 for DEPENDENCY in $DEPENDENCIES
 do
-  echo ""
-  if ! command -v DEPENDENCY
+  echo "Checking $DEPENDENCY dependency"
+  if ! command -v "$DEPENDENCY"
   then
       echo "$DEPENDENCY could not be found"
       exit
