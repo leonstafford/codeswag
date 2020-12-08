@@ -120,6 +120,10 @@ cat <<'EOIGNORE' >> "$HOME/.gitignore"
 venv/
 EOIGNORE
 
+# global ignore
+git config --global core.excludesFile "$HOME/.gitignore"
+
 # setup git user config
 git config --global user.email "me@ljs.dev"
 git config --global user.name "Leon Stafford"
+
