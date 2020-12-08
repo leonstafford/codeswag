@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# usage
+# 
+# sh -c "$(curl -sSl https://raw.githubusercontent.com/leonstafford/codeswag/master/setupcamp.sh)"
+
 DEPENDENCIES="git
 vim
 composer
