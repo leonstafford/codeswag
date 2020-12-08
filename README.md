@@ -3,6 +3,8 @@
 My minimal required tools and code to keep working as I wander from laptop to 
  container to VM.
 
+[![CircleCI](https://circleci.com/gh/leonstafford/codeswag.svg?style=svg)](https://circleci.com/gh/leonstafford/codeswag)
+
 ## Why Swag?
 
 *Swag* is a term used in Australia/New Zealand, generally meaning some bedding
@@ -13,7 +15,7 @@ Of late, all my posessions have lived in a 70 litre backpack and covered some
  decent walking distances with me.
 
 My coding setup has always been minimal, which also gives it the benefit of
- portability. It's been just Vim, tmux, with just a few lies of
+ portability. It's been just Vim, tmux and git, with just a few lies of
  [notfiles](https://github.com/leonstafford/notfiles). That covers me for all
  the PHP, JavaScript and shell scripting I do, with dependency managers pulling
  in most code/libraries from each project's git repos.
