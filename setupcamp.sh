@@ -119,3 +119,7 @@ cat <<'EOIGNORE' >> "$HOME/.gitignore"
 *.cache
 venv/
 EOIGNORE
+
+# setup git user config
+git config --global user.email "me@ljs.dev"
+git config --global user.name "Leon Stafford"
