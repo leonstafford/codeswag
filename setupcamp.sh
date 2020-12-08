@@ -9,7 +9,7 @@ tmux
 for DEPENDENCY in $DEPENDENCIES
 do
   echo ""
-  if ! command -v DEPENDENCY &> /dev/null
+  if ! command -v DEPENDENCY
   then
       echo "$DEPENDENCY could not be found"
       exit
@@ -18,7 +18,7 @@ done
 
 
 # home is where the home is (symlink WP plugins into site)
-cd $HOME || exit 1
+cd "$HOME" || exit 1
 
 # shallow clone all my WordPress plugin and commonly worked on repos, such as
 # Hugo sites
@@ -36,7 +36,7 @@ leonstafford/wp2static-addon-cloudflare-workers
 # iterate each repo
 for REPO in $WP2STATIC_REPOS
 do
-  DIRNAME="$(echo $REPO | cut -d\/ -f2)"
+  DIRNAME="$(echo "$REPO" | cut -d'/' -f2)"
   echo ""
   echo "##############################################"
   echo ""
@@ -45,11 +45,11 @@ do
   echo "##############################################"
   echo ""
 
-  if [[ -d "$DIRECTORY" ]]
+  if [ -d "$DIRECTORY" ]
   then
       echo "$DIRECTORY already exists, not doing anything."
   else
-    cd $HOME || exit 1
+    cd "$HOME" || exit 1
 
     # shallow clone
     git clone --quiet --depth=1 "git@github.com:$REPO.git"
@@ -57,11 +57,11 @@ do
     # cd into repo
     cd "$DIRNAME" || exit 1
 
-    if [[ -f <file> ]]
-    then
-        echo "Composer file detected, installing dependencies."
-        composer i -q || exit 1
-    fi
+    # if [[ -f <file> ]]
+    # then
+    #     echo "Composer file detected, installing dependencies."
+    #     composer i -q || exit 1
+    # fi
   fi
 done
 
