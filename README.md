@@ -48,10 +48,17 @@ That should be about all that's required. For [Lokl](https://lokl.dev), I should
  the AMI. May be missing binaries on some environments, like `hugo`, but easily
  added.
 
-## Usage
+## Usage (generic)
 
  - install RSA private key, `chmod`'d to 400
  - `sh -c "$(curl -sSl https://raw.githubusercontent.com/leonstafford/codeswag/master/setupcamp.sh)"`
+
+### macOS
+
+ - `sh -c "$(curl -sSl https://raw.githubusercontent.com/leonstafford/codeswag/master/macos-first-boot.sh)"`
+ - install RSA private key, `chmod`'d to 400
+ - `sh -c "$(curl -sSl https://raw.githubusercontent.com/leonstafford/codeswag/master/macos-second-boot.sh)"`
+
 
 
 
