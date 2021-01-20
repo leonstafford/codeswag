@@ -29,34 +29,46 @@ cd "$HOME" || exit 1
 # shallow clone all my WordPress plugin and commonly worked on repos, such as
 # Hugo sites
 
-WP2STATIC_REPOS="leonstafford/notfiles
-leonstafford/wp2static
-leonstafford/wp2static-addon-advanced-crawling
-leonstafford/wp2static-addon-advanced-detection
-leonstafford/wp2static-addon-advanced-html-processor
-leonstafford/wp2static-addon-algolia
-leonstafford/wp2static-addon-azure
-leonstafford/wp2static-addon-bitbucket
-leonstafford/wp2static-addon-boilerplate
-leonstafford/wp2static-addon-bunnycdn
-leonstafford/wp2static-addon-cloudflare-workers
-leonstafford/wp2static-addon-ftp
-leonstafford/wp2static-addon-github
-leonstafford/wp2static-addon-gitlab
-leonstafford/wp2static-addon-netlify
-leonstafford/wp2static-addon-s3
-leonstafford/wp2static-addon-sftp
-leonstafford/wp2static-addon-static-form-converter
-leonstafford/wp2static-addon-vercel
-leonstafford/wp2static-addon-woocommerce-snipcart
-leonstafford/wp2static-addon-zip
-leonstafford/static-html-output
-leonstafford/simplerstatic
+LEONSTAFFORD_REPOS="notfiles
+wp2static
+wp2static-addon-advanced-crawling
+wp2static-addon-advanced-detection
+wp2static-addon-advanced-html-processor
+wp2static-addon-algolia
+wp2static-addon-azure
+wp2static-addon-bitbucket
+wp2static-addon-boilerplate
+wp2static-addon-bunnycdn
+wp2static-addon-cloudflare-workers
+wp2static-addon-ftp
+wp2static-addon-gcs
+wp2static-addon-github
+wp2static-addon-gitlab
+wp2static-addon-netlify
+wp2static-addon-s3
+wp2static-addon-sftp
+wp2static-addon-static-form-converter
+wp2static-addon-vercel
+wp2static-addon-woocommerce-snipcart
+wp2static-addon-zip
+static-html-output
+simplerstatic
+lokl
+lokl-cli
+ljsdotdev
+check-for-dirty-local-repos
+lokl-www
+wp2static-www
+wp2staticpsr7
+wp2staticpromises
+wp2staticguzzle
+AriseByAnyOtherName
+statichtmloutput-www
 "
 
 # skip any already existing, allowing to update script and pull new ones safely
 # iterate each repo
-for REPO in $WP2STATIC_REPOS
+for REPO in $LEONSTAFFORD_REPOS
 do
   DIRNAME="$(echo "$REPO" | cut -d'/' -f2)"
   echo ""
@@ -74,7 +86,7 @@ do
     cd "$HOME" || exit 1
 
     # shallow clone
-    git clone --quiet --depth=1 "git@github.com:$REPO.git"
+    git clone --quiet --depth=1 "git@github.com:leonstafford/$REPO.git"
 
     # cd into repo
     cd "$DIRNAME" || exit 1
