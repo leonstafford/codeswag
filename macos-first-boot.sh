@@ -32,13 +32,12 @@ xattr -d -r com.apple.quarantine /Applications/Authy\ Desktop.app
 brew install \
  tmux \
  wget
- shellcheck
+ shellcheck \
+ kcov \
  php 
 
 # install ShellSpec
 brew tap shellspec/shellspec && brew install shellspec
-
-
 
 # Disable auto-correct:
 defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
