@@ -35,6 +35,10 @@ brew install \
  shellcheck
  php 
 
+# install ShellSpec
+brew tap shellspec/shellspec && brew install shellspec
+
+
 
 # Disable auto-correct:
 defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
