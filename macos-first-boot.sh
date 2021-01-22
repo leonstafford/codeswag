@@ -34,6 +34,7 @@ brew install \
  wget
  shellcheck \
  kcov \
+ hugo \
  php 
 
 # install ShellSpec
