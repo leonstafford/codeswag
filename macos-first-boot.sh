@@ -35,6 +35,7 @@ brew install \
  shellcheck \
  kcov \
  hugo \
+ awscli \
  php 
 
 # install ShellSpec
