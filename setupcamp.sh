@@ -64,6 +64,7 @@ wp2staticpromises
 wp2staticguzzle
 AriseByAnyOtherName
 statichtmloutput-www
+accessible-minimalism-hugo-theme
 "
 
 # skip any already existing, allowing to update script and pull new ones safely
