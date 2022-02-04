@@ -7,17 +7,36 @@
 sudo -u "$USER" defaults write com.apple.Terminal.plist "Default Window Settings" "Homebrew"
 sudo -u "$USER" defaults write com.apple.Terminal.plist "Startup Window Settings" "Homebrew"
 # needs Terminal restart to take effect
-killall Terminal
+# killall Terminal
 
 # install GUI apps
 brew install --cask \
+ audio-hijack \
+ authy \
+ bitwarden \
+ cyberduck \
  docker \
  firefox \
+ google-chrome \
+ lens \
+ postman \
+ sequel-ace \
+ slack \
+ soundsource \
  telegram \
  thunderbird \
- bitwarden \
- slack \
- authy
+ transmission \
+ tunnelblick \
+ vlc
+
+# install paid GUI apps
+brew install --cask \
+ farrago \
+ fission \
+ loopback
+
+# install paid GUI apps
+echo "Manually install Logic Pro, Profiling Viewer, etc from App Store"
 
 # give permission to open these first time without prompt
 xattr -d -r com.apple.quarantine /Applications/Slack.app
