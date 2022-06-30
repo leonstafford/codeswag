@@ -18,7 +18,6 @@ brew install --cask \
  farrago \
  fission \
  firefox \
- firefox-nightly \
  google-chrome \
  lens \
  little-snitch \
