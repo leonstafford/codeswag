@@ -9,6 +9,9 @@ sudo -u "$USER" defaults write com.apple.Terminal.plist "Startup Window Settings
 # needs Terminal restart to take effect
 # killall Terminal
 
+# install mac CLI App Store tool
+brew install mas
+
 # install GUI apps (free and purchased)
 brew install --cask \
  audio-hijack \
@@ -23,7 +26,6 @@ brew install --cask \
  little-snitch \
  loopback \
  mamp \
- mas \
  postman \
  sequel-ace \
  slack \
