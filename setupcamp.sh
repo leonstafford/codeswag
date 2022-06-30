@@ -29,7 +29,26 @@ cd "$HOME" || exit 1
 # shallow clone all my WordPress plugin and commonly worked on repos, such as
 # Hugo sites
 
-LEONSTAFFORD_REPOS="notfiles
+LEONSTAFFORD_REPOS="AriseByAnyOtherName
+accessible-minimalism-hugo-theme
+check-for-dirty-local-repos
+drumstudy-child-theme
+drumstudy-wp-plugin
+drumstudy-www
+hebrewarabicstudy-child-theme
+hebrewarabicstudy-wp-plugin
+hebrewarabicstudy-www
+ljsdotdev
+lokl
+lokl-cli
+lokl-www
+notfiles
+oppositepeople-www
+simplerstatic
+smart-404
+static-html-output
+staticempire-www
+statichtmloutput-www
 wp2static
 wp2static-addon-advanced-crawling
 wp2static-addon-advanced-detection
@@ -40,6 +59,7 @@ wp2static-addon-bitbucket
 wp2static-addon-boilerplate
 wp2static-addon-bunnycdn
 wp2static-addon-cloudflare-workers
+wp2static-addon-directory-deployment
 wp2static-addon-ftp
 wp2static-addon-gcs
 wp2static-addon-github
@@ -51,20 +71,10 @@ wp2static-addon-static-form-converter
 wp2static-addon-vercel
 wp2static-addon-woocommerce-snipcart
 wp2static-addon-zip
-static-html-output
-simplerstatic
-lokl
-lokl-cli
-ljsdotdev
-check-for-dirty-local-repos
-lokl-www
 wp2static-www
-wp2staticpsr7
-wp2staticpromises
 wp2staticguzzle
-AriseByAnyOtherName
-statichtmloutput-www
-accessible-minimalism-hugo-theme
+wp2staticpromises
+wp2staticpsr7
 "
 
 # skip any already existing, allowing to update script and pull new ones safely
@@ -99,7 +109,6 @@ do
     # fi
   fi
 done
-
 
 # grab my few notfiles lines and append/create in appropriate files for system
 cd "$HOME/notfiles" || exit 1
