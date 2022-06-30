@@ -14,8 +14,9 @@ sh -c "$(curl -sSl https://raw.githubusercontent.com/leonstafford/codeswag/maste
 
 # Install Firefox addons (on launch, allow in private sessions):
 cd /tmp || exit 1
-wget https://addons.mozilla.org/firefox/downloads/file/3701081/ublock_origin-1.32.4-an+fx.xpi
-wget https://addons.mozilla.org/firefox/downloads/file/3688243/bitwarden_free_password_manager-1.47.1-an+fx.xpi
+wget https://addons.mozilla.org/firefox/downloads/file/3961087/ublock_origin-1.43.0.xpi
+wget https://addons.mozilla.org/firefox/downloads/file/3872283/privacy_badger17-2021.11.23.1.xpi
+wget https://addons.mozilla.org/firefox/downloads/file/3960137/bitwarden_password_manager-2022.5.0.xpi
 /Applications/Firefox.app/Contents/MacOS/firefox-bin ./*.xpi* &
 rm ./*.xpi*
 
