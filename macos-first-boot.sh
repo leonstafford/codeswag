@@ -94,6 +94,8 @@ echo ""
 echo "Logout/in and run macos-first-boot.sh"
 echo ""
 echo "Manually install old Transmit version for now - see notes"
+echo ""
+echo "Manually enabled System Extensions via safe mode or such, to allow audio apps to control things"
 
 # Notes on Transmit v4
 # Download latest from https://download-keycdn.panic.com/transmit/Transmit%204
