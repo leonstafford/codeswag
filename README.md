@@ -55,8 +55,8 @@ That should be about all that's required. For [Lokl](https://lokl.dev), I should
 
 ### macOS
 
- - `sh -c "$(curl -sSl https://raw.githubusercontent.com/leonstafford/codeswag/master/macos-first-boot.sh)"`
  - install RSA private key, `chmod`'d to 400
+ - `sh -c "$(curl -sSl https://raw.githubusercontent.com/leonstafford/codeswag/master/macos-first-boot.sh)"`
  - `sh -c "$(curl -sSl https://raw.githubusercontent.com/leonstafford/codeswag/master/macos-second-boot.sh)"`
 
 
