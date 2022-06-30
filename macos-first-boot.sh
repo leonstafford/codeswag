@@ -13,7 +13,6 @@ sudo -u "$USER" defaults write com.apple.Terminal.plist "Startup Window Settings
 brew install --cask \
  audio-hijack \
  authy \
- bitwarden \
  cyberduck \
  docker \
  farrago \
@@ -92,6 +91,12 @@ echo ""
 echo "Initial setup complete"
 echo ""
 echo "Logout/in and run macos-first-boot.sh"
+echo ""
+echo "Manually install old Transmit version for now - see notes"
+
+# Notes on Transmit v4
+# Download latest from https://download-keycdn.panic.com/transmit/Transmit%204
+
 
 exit 0
 
