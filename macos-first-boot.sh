@@ -9,16 +9,23 @@ sudo -u "$USER" defaults write com.apple.Terminal.plist "Startup Window Settings
 # needs Terminal restart to take effect
 # killall Terminal
 
-# install GUI apps
+# install GUI apps (free and purchased)
 brew install --cask \
  audio-hijack \
  authy \
  bitwarden \
  cyberduck \
  docker \
+ farrago \
+ fission \
  firefox \
+ firefox-nightly \
  google-chrome \
  lens \
+ little-snitch \
+ loopback \
+ mamp \
+ mas \
  postman \
  sequel-ace \
  slack \
@@ -29,11 +36,16 @@ brew install --cask \
  tunnelblick \
  vlc
 
-# install paid GUI apps
-brew install --cask \
- farrago \
- fission \
- loopback
+# install App Store apps via mas CLI tool
+# if encountering issues, check note about running within tmux
+mas install 1079647046  # Profiling Viewer
+mas install 1295203466  # Microsoft Remote Desktop
+mas install 1352778147  # Bitwarden
+mas install 1496833156  # Swift Playgrounds
+mas install 424389933   # Final Cut Pro
+mas install 497799835   # Xcode
+mas install 634148309   # Logic Pro  
+mas install 682658836   # GarageBand
 
 # install paid GUI apps
 echo "Manually install Logic Pro, Profiling Viewer, etc from App Store"
