@@ -100,6 +100,8 @@ echo ""
 echo "TODO: set Vim extension for editorconfig"
 echo ""
 echo "TODO: set global git ignore"
+echo ""
+echo "TODO: set global git config - personal/work emails per repo"
 
 # Notes on Transmit v4
 # Download latest from https://download-keycdn.panic.com/transmit/Transmit%204
