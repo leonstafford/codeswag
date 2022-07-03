@@ -116,7 +116,7 @@ cd "$HOME/notfiles" || exit 1
 cat <<'EOVIM' >> "$HOME/.vimrc"
 set ts=2 sw=2 expandtab ruler nu noswapfile colorcolumn=80                      
 syntax on                                                                       
-colorscheme delek                                                               
+colorscheme default
                                                                                 
 autocmd Filetype php setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4       
 autocmd Filetype js setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
