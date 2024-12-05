@@ -5,9 +5,12 @@
 # sh -c "$(curl -sSl https://raw.githubusercontent.com/leonstafford/codeswag/master/setupcamp.sh)"
 
 # notes on USB audio:
+#
+# on X1C - use USB A -> C cable, not working via USB-C only
 # doas rcctl set sndiod flags -f rsnd/0 -F rsnd/1
 # doas rcctl restart sndiod                       
 # x1c$ sndioctl output.level=0.7   
+# then need to restart browser tab if playing
 
 DEPENDENCIES="git
 vim
