@@ -89,10 +89,18 @@ cat <<'EOIGNORE' > "$HOME/.gitignore"
 venv/
 EOIGNORE
 
+# new terminals open fullscreen
+cat <<'EOCWMRC' > "$HOME/.cwmrc"
+bind-key CM-Return "xterm -maximized"
+borderwidth 0
+EOCWMRC
+
+
 # global ignore
 git config --global core.excludesFile "$HOME/.gitignore"
 
 # setup git user config
 git config --global user.email "me@ljs.dev"
 git config --global user.name "Leon Stafford"
+
 
