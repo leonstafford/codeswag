@@ -4,6 +4,11 @@
 # 
 # sh -c "$(curl -sSl https://raw.githubusercontent.com/leonstafford/codeswag/master/setupcamp.sh)"
 
+# notes on USB audio:
+# doas rcctl set sndiod flags -f rsnd/0 -F rsnd/1
+# doas rcctl restart sndiod                       
+# x1c$ sndioctl output.level=0.7   
+
 DEPENDENCIES="git
 vim
 tmux
