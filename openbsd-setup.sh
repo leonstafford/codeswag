@@ -6,7 +6,6 @@
 
 DEPENDENCIES="git
 vim
-composer
 tmux
 "
 
@@ -29,52 +28,8 @@ cd "$HOME" || exit 1
 # shallow clone all my WordPress plugin and commonly worked on repos, such as
 # Hugo sites
 
-LEONSTAFFORD_REPOS="AriseByAnyOtherName
-accessible-minimalism-hugo-theme
-check-for-dirty-local-repos
-drumstudy-child-theme
-drumstudy-wp-plugin
-drumstudy-www
-hebrewarabicstudy-child-theme
-hebrewarabicstudy-wp-plugin
-hebrewarabicstudy-www
-ljsdotdev
-lokl
-lokl-cli
-lokl-www
+LEONSTAFFORD_REPOS="ljsdotdev
 notfiles
-oppositepeople-www
-simplerstatic
-smart-404
-static-html-output
-staticempire-www
-statichtmloutput-www
-wp2static
-wp2static-addon-advanced-crawling
-wp2static-addon-advanced-detection
-wp2static-addon-advanced-html-processor
-wp2static-addon-algolia
-wp2static-addon-azure
-wp2static-addon-bitbucket
-wp2static-addon-boilerplate
-wp2static-addon-bunnycdn
-wp2static-addon-cloudflare-workers
-wp2static-addon-directory-deployment
-wp2static-addon-ftp
-wp2static-addon-gcs
-wp2static-addon-github
-wp2static-addon-gitlab
-wp2static-addon-netlify
-wp2static-addon-s3
-wp2static-addon-sftp
-wp2static-addon-static-form-converter
-wp2static-addon-vercel
-wp2static-addon-woocommerce-snipcart
-wp2static-addon-zip
-wp2static-www
-wp2staticguzzle
-wp2staticpromises
-wp2staticpsr7
 "
 
 # skip any already existing, allowing to update script and pull new ones safely
@@ -96,24 +51,16 @@ do
   else
     cd "$HOME" || exit 1
 
-    # shallow clone
-    git clone --quiet --depth=1 "git@github.com:leonstafford/$REPO.git"
+    echo "cloning $DIRECTORY"
+    # git clone "git@github.com:leonstafford/$REPO.git"
 
-    # cd into repo
-    cd "$DIRNAME" || exit 1
-
-    # if [[ -f <file> ]]
-    # then
-    #     echo "Composer file detected, installing dependencies."
-    #     composer i -q || exit 1
-    # fi
   fi
 done
 
 # grab my few notfiles lines and append/create in appropriate files for system
 cd "$HOME/notfiles" || exit 1
 
-cat <<'EOVIM' >> "$HOME/.vimrc"
+cat <<'EOVIM' > "$HOME/.vimrc"
 set ts=2 sw=2 expandtab ruler nu noswapfile colorcolumn=80                      
 syntax on                                                                       
 colorscheme default
@@ -122,7 +69,7 @@ autocmd Filetype php setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
 autocmd Filetype js setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
 EOVIM
 
-cat <<'EOTMUX' >> "$HOME/.tmux.conf"
+cat <<'EOTMUX' > "$HOME/.tmux.conf"
 # moving between panes
 bind h select-pane -L
 bind j select-pane -D
@@ -134,7 +81,7 @@ set -g history-limit 999999999
 EOTMUX
 
 # set up global `~/.gitignore`
-cat <<'EOIGNORE' >> "$HOME/.gitignore"
+cat <<'EOIGNORE' > "$HOME/.gitignore"
 *.swp
 *.swo
 .DS_Store
